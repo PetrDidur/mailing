@@ -1,0 +1,16 @@
+{% extends 'mailing/base.html' %}
+{% block content %}
+    <div class="container">
+    <a class="btn btn-primary" href="{% url 'mailing:create_customer' %}">Создать пользователя</a>
+    </div>
+    <div class="container">
+    <div class="row">
+    {% for object in object_list %}
+  {% include 'mailing/includes/inc_customer.html' %}
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}
+
+
+

@@ -1,0 +1,22 @@
+<!-- Ваш HTML-код и начало цикла для итерации по объектам MailingLog -->
+<div class="container">
+  <div class="row">
+    {% for log in object_list %}
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-header">
+          {{ log.mailing.theme }}
+        </div>
+        <div class="card-body">
+          <p class="card-text">Дата и время: {{ log.last_try }}</p>
+          <p class="card-text">Статус: {{ log.get_last_try_status_display }}</p>
+          <p class="card-text">Клиент: {{ log.customer.full_name }}</p>
+          <p class="card-text">Рассылка: {{ log.mailing.theme }}</p>
+          <p class="card-text">Error Message: {{ log.error_msg }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- Завершение цикла и другой HTML-код -->

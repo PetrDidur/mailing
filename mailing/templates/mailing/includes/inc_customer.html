@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+    <div class="col-12 card mb-5 text-center" style="max-width: 300px">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ object.full_name }}</h5>
+            <p class="card-text"><strong>Email:</strong> {{ object.email }}</p>
+            <p class="card-text"><strong>Комментарий:</strong> {{ object.comment }}</p>
+        </div>
+        <div class="card-footer">
+        <div class="btn-group">
+            <a href="{% url 'mailing:customer_detail' object.pk %}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+            <a href="{% url 'mailing:customer_update' object.pk%}" type="button" class="btn btn-sm btn-outline-secondary">Edit</a>
+            <a href="{% url 'mailing:customer_delete' object.pk %}" type="button" class="btn btn-sm btn-outline-secondary">Delete</a>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
